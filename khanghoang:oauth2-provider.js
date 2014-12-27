@@ -11,7 +11,7 @@ if(Meteor.isServer) {
 
       // return token
       // return Npm.require('crypto-js').HmacSHA1('username', 'password')
-      var token = Meteor.npmRequire('crypto-js').HmacSHA1('username', 'password')
+      var token = Npm.require('crypto-js').HmacSHA1('username', 'password')
 
       console.log(token.toString())
 
