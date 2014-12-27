@@ -10,7 +10,14 @@ Npm.depends({
 })
 
 Package.onUse(function (api) {
-  api.use(['underscore', 'mongo'], ['server', 'client'])
-  api.export(['Token'], ['server', 'client'])
-  api.addFiles(['khanghoang/oauth2-provider.js'], ['server', 'client'])
+  api.versionsFrom('0.9.0')
+  api.use(['underscore', 'mongo@1.0.4'], ['server', 'client'])
+  api.use('application-configuration@1.0.0');
+  api.export(['Token'], ['server', 'client']),
+  api.addFiles(['khanghoang:oauth2-provider.js'], ['server', 'client']) 
+})
+
+Package.onTest(function (api) {
+  api.use('tinytest'),
+  api.addFiles('khanghoang:oauth2-provider-tests.js', 'server')
 })
