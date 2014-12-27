@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Simple username and password exchanges for token',
-  version: '0.0.1',
+  version: '0.0.2',
   name: 'khanghoang:oauth2-provider',
   git: 'https://github.com/khanghoang/oauth2-provider.git'
 })
