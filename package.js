@@ -6,7 +6,8 @@ Package.describe({
 })
 
 Npm.depends({
-  'crypto-js': "3.1.2-5"
+  'crypto-js': "3.1.2-5",
+  'bcrypt': '0.8.0'
 })
 
 Package.onUse(function (api) {
